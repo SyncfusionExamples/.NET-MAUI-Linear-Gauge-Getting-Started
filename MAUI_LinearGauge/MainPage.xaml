@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_LinearGauge.MainPage"
+             xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid >
+            <gauge:SfLinearGauge VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="400">
+                <gauge:SfLinearGauge.Ranges>
+                    <gauge:LinearRange StartValue="0" EndValue="100"/>
+                </gauge:SfLinearGauge.Ranges>
+                <gauge:SfLinearGauge.BarPointers>
+                    <gauge:BarPointer Value="50" />
+                </gauge:SfLinearGauge.BarPointers>
+                <gauge:SfLinearGauge.MarkerPointers>
+                    <gauge:LinearShapePointer Value="60" />
+                    <gauge:LinearContentPointer x:Name="contentPointer" OffsetY="-15" Value="60">
+                        <gauge:LinearContentPointer.Content>
+                            <Label Text="{Binding Value, Source={x:Reference contentPointer}}" />
+                        </gauge:LinearContentPointer.Content>
+                    </gauge:LinearContentPointer>
+                </gauge:SfLinearGauge.MarkerPointers>
+            </gauge:SfLinearGauge>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
