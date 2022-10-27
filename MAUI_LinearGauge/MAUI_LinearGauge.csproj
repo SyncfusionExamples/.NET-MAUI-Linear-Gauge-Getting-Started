@@ -56,7 +56,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="20.1.47-preview" />
+	  <PackageReference Include="Syncfusion.Maui.Gauges" Version="*" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
