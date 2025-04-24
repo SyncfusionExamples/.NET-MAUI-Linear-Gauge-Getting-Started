@@ -17,7 +17,7 @@
                     <gauge:LinearShapePointer Value="60" />
                     <gauge:LinearContentPointer x:Name="contentPointer" OffsetY="-15" Value="60">
                         <gauge:LinearContentPointer.Content>
-                            <Label Text="{Binding Value, Source={x:Reference contentPointer}}" />
+                            <Label Text="{Binding Source={x:Reference contentPointer}, Path=Value}" />
                         </gauge:LinearContentPointer.Content>
                     </gauge:LinearContentPointer>
                 </gauge:SfLinearGauge.MarkerPointers>
